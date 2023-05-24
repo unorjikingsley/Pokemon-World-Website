@@ -28,12 +28,12 @@ export default class LaunchUI {
         const h3 = launchCard.getElementsByTagName('h3')[0];
         h3.innerText = launch.name;
 
-        const btnComment = launchCard.querySelector('.reserve');
+        const btnComment = launchCard.querySelector('.comment');
         btnComment.addEventListener('click', () => {
           LaunchUI.showModal(launch.id);
         });
 
-        const btnReserve = launchCard.querySelector('.comment');
+        const btnReserve = launchCard.querySelector('.reserve');
         btnReserve.addEventListener('click', () => {
           LaunchUI.showModalReserve(launch.id);
         });
@@ -41,7 +41,7 @@ export default class LaunchUI {
         const likesCount = launchCard.querySelector('.likes span');
         InvolvementUI.renderLikes(likesCount, launch.id);
         const likeBtn = launchCard.querySelector('.likes i');
-        likeBtn.addEventListener('click', () => InvolvementUI.post.postLike(likesCount, launch.id));
+        likeBtn.addEventListener('click', () => InvolvementUI.postLike(likesCount, launch.id));
 
         launchList.appendChild(launchCard);
       });

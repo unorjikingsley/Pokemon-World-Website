@@ -2,13 +2,13 @@ import { Comment, Reserve } from './Modal.js';
 
 export default class InvolvementAPI {
   static commentsURL =
-    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OksROXubdPZOl6089KcE/comments'
+    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/1t7BiC343viu9RJP3IIx/comments'
 
   static likesURL =
-    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OksROXubdPZOl6089KcE/likes'
+    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/1t7BiC343viu9RJP3IIx/likes'
 
   static reserveURL =
-    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OksROXubdPZOl6089KcE/reservations'
+    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/1t7BiC343viu9RJP3IIx/reservations'
 
   static fetchComments = async (launchId) => {
     const comments = [];
