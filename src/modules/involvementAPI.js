@@ -15,6 +15,7 @@ export default class InvolvementAPI {
     await fetch(`${InvolvementAPI.commentsURL}?item_id=${launchId}`)
       .then((response) => {
         if (!response.ok) {
+          console.log(response);
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         return response.json();
@@ -61,6 +62,7 @@ export default class InvolvementAPI {
   }
 
   static getReservation = async (launchId) => {
+    console.log(launchId);
     const reserves = [];
     await fetch(`${InvolvementAPI.reserveURL}?item_id=${launchId}`)
       .then((response) => {
