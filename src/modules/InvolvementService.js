@@ -20,11 +20,9 @@ export default class InvolvementService {
   }
 
   static getLikes = async (launchId) => {
-    if (likesArray.length < 1) {
-      await this.getAllLikes();
-    }
+    if (likesArray.length < 1) { await this.getAllLikes(); }
     const record = likesArray.find((l) => l.item_id === launchId);
-    return record != null ? record.likes : 0;
+    return (record != null) ? record.likes : 0;
   }
 
   static postLike = async (launchId) => {
